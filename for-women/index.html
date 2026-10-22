@@ -1,0 +1,104 @@
+---
+layout: default
+title: "Gifts for Women — Curated Catalog | Science of Gifts"
+description: "Discover laboratory-tested, research-backed gift recommendations curated for women. Heirloom tools, rare editions, and desk ephemera."
+canonical_url: "https://scienceofgifts.com/for-women/"
+---
+
+<div id="for-women-page-container" class="pb-16 space-y-12">
+  <!-- Header -->
+  <header class="pt-12 pb-10 border-b border-[#99BFF9]/30 bg-[#FAF9F6]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
+      <div class="text-xs uppercase tracking-widest text-[#226E56] font-semibold">Product Curation</div>
+      <h1 class="font-serif-display text-4xl sm:text-5xl text-[#1E232B] font-normal leading-tight">
+        Gifts for Women
+      </h1>
+      <p class="text-base text-[#5A6270] max-w-2xl leading-relaxed">
+        Independently field-tested objects, archival instruments, and rare literature selected for durability, tactile utility, and narrative depth.
+      </p>
+    </div>
+  </header>
+
+  <!-- Product Collection Section -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+    <!-- Category & Filter Bar -->
+    <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-4 border-b border-[#99BFF9]/20">
+      <div id="women-category-buttons" class="flex items-center gap-1.5 overflow-x-auto pb-1 md:pb-0">
+        {% for cat in site.data.collections.women %}
+        <button data-slug="{{ cat.slug }}" data-title="{{ cat.title }}" data-recipients="{{ cat.recipients | join: ',' }}" class="women-cat-btn px-3.5 py-1.5 text-xs font-medium rounded transition-colors whitespace-nowrap cursor-pointer {% if forloop.first %}bg-[#2A548E] text-white{% else %}text-[#5A6270] hover:text-[#2A548E] hover:bg-[#EEF5FF]{% endif %}">
+          {{ cat.title }}
+        </button>
+        {% endfor %}
+      </div>
+
+      <!-- Controls: Sort & Count -->
+      <div class="flex items-center justify-between sm:justify-end gap-4 text-xs shrink-0">
+        <div class="flex items-center gap-2">
+          <label for="women-sort-select" class="text-[#5A6270]">Filter / Sort:</label>
+          <select id="women-sort-select" class="bg-white border border-[#99BFF9]/40 px-2.5 py-1 text-xs text-[#1E232B] focus:border-[#2A548E] outline-none rounded-xs cursor-pointer">
+            <option value="featured">Featured Curation</option>
+            <option value="price-asc">Price: Low to High</option>
+            <option value="price-desc">Price: High to Low</option>
+            <option value="under-50">Under $50</option>
+            <option value="50-100">$50 – $100</option>
+            <option value="over-100">$100+</option>
+          </select>
+        </div>
+        <div id="women-results-count" class="font-mono-code text-xs text-[#5A6270]">
+          Showing 1 – {{ site.data.products.size }} of {{ site.data.products.size }} gifts
+        </div>
+      </div>
+    </div>
+
+    <!-- Archetype / Persona Tag Bar -->
+    <div id="women-interest-buttons" class="flex items-center gap-2 overflow-x-auto pb-2 border-b border-[#99BFF9]/20 text-xs text-[#5A6270]">
+      <span class="font-semibold text-[#154D3B] shrink-0 uppercase tracking-wider text-[11px] flex items-center gap-1">
+        <svg class="w-3.5 h-3.5 text-[#226E56]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"></path></svg>
+        Archetypes &amp; Passions:
+      </span>
+      <button data-interest="all" class="women-interest-btn px-2.5 py-1 rounded bg-[#2A548E] text-white font-medium transition-colors whitespace-nowrap cursor-pointer">
+        All Passions
+      </button>
+      <button data-interest="books" class="women-interest-btn px-2.5 py-1 rounded bg-white text-[#5A6270] border border-[#99BFF9]/30 hover:text-[#2A548E] hover:bg-[#EEF5FF] transition-colors whitespace-nowrap cursor-pointer">
+        If she's a reader
+      </button>
+      <button data-interest="cooking" class="women-interest-btn px-2.5 py-1 rounded bg-white text-[#5A6270] border border-[#99BFF9]/30 hover:text-[#2A548E] hover:bg-[#EEF5FF] transition-colors whitespace-nowrap cursor-pointer">
+        If she's a chef
+      </button>
+      <button data-interest="art-design" class="women-interest-btn px-2.5 py-1 rounded bg-white text-[#5A6270] border border-[#99BFF9]/30 hover:text-[#2A548E] hover:bg-[#EEF5FF] transition-colors whitespace-nowrap cursor-pointer">
+        If she loves design
+      </button>
+      <button data-interest="food-drink" class="women-interest-btn px-2.5 py-1 rounded bg-white text-[#5A6270] border border-[#99BFF9]/30 hover:text-[#2A548E] hover:bg-[#EEF5FF] transition-colors whitespace-nowrap cursor-pointer">
+        If she likes to party &amp; entertain
+      </button>
+      <button data-interest="stationery" class="women-interest-btn px-2.5 py-1 rounded bg-white text-[#5A6270] border border-[#99BFF9]/30 hover:text-[#2A548E] hover:bg-[#EEF5FF] transition-colors whitespace-nowrap cursor-pointer">
+        If she appreciates fine stationery
+      </button>
+    </div>
+
+    <!-- Products Grid -->
+    <div id="women-products-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {% for p in site.data.products limit:12 %}
+      {% include product-card-grid.html product=p %}
+      {% endfor %}
+    </div>
+
+    <!-- Pagination controls -->
+    <div class="pt-8 border-t border-[#99BFF9]/30 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div id="women-page-status" class="text-xs text-[#5A6270]">Page 1 of 1</div>
+      <div id="women-pagination-controls" class="flex items-center gap-2">
+        <button id="women-prev-btn" disabled class="px-3 py-1.5 border border-[#99BFF9]/40 text-xs font-medium text-[#1E232B] disabled:opacity-30 hover:bg-[#EEF5FF] transition-colors flex items-center gap-1 cursor-pointer">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-left w-3.5 h-3.5" aria-hidden="true"><path d="m15 18-6-6 6-6"></path></svg>
+          Previous
+        </button>
+        <button id="women-next-btn" disabled class="px-3 py-1.5 border border-[#99BFF9]/40 text-xs font-medium text-[#1E232B] disabled:opacity-30 hover:bg-[#EEF5FF] transition-colors flex items-center gap-1 cursor-pointer">
+          Next
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right w-3.5 h-3.5" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Newsletter Section -->
+  {% include newsletter.html %}
+</div>
