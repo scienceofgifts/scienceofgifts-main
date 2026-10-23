@@ -1,6 +1,6 @@
 {
-  "name": "",
-  "description": "",
+  "name": "Science of Gifts",
+  "description": "An editorial gift-discovery publication featuring rigorously tested gift guides, thoughtful essays, and curated recommendations.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

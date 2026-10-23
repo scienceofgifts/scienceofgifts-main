@@ -24,23 +24,27 @@ relatedArticleSlugs:
   - psychology-of-regifting
   - physical-objects-vs-experiences
 sources:
-  - title: "The Giver-Recipient Asymmetry: Why Givers and Recipients Disagree on What Makes a Good Gift"
+  - id: giver-recipient-asymmetry
+    title: "The Giver-Recipient Asymmetry: Why Givers and Recipients Disagree on What Makes a Good Gift"
     author: Jeff Galak, Julian Givi, and Elanor F. Williams
     publication: Current Directions in Psychological Science
     year: 2016
     url: "https://journals.sagepub.com/doi/10.1177/0963721416656937"
     annotation: "Foundational paper establishing the temporal disconnect between giver expectations and receiver longitudinal satisfaction."
-  - title: "Giver-Recipient Asymmetry in Evaluative Judgments of Hedonic and Utilitarian Gifts"
+  - id: hedonic-utilitarian-gifts
+    title: "Giver-Recipient Asymmetry in Evaluative Judgments of Hedonic and Utilitarian Gifts"
     author: Julian Givi and Jeff Galak
     publication: Journal of Consumer Psychology
     year: 2017
     url: "https://onlinelibrary.wiley.com/journal/15327663"
-  - title: "I Know You Are But What Am I? Perspective Taking in Gift Giving"
+  - id: perspective-taking-study
+    title: "I Know You Are But What Am I? Perspective Taking in Gift Giving"
     author: Nicholas Epley and Yan Zhang
     publication: Journal of Experimental Social Psychology
     year: 2012
     url: "https://www.sciencedirect.com/journal/journal-of-experimental-social-psychology"
-  - title: "To Do or to Have? That Is the Question (On the Utility of Experiential vs. Material Purchases)"
+  - id: experiential-vs-material
+    title: "To Do or to Have? That Is the Question (On the Utility of Experiential vs. Material Purchases)"
     author: Leaf Van Boven and Thomas Gilovich
     publication: Journal of Personality and Social Psychology
     year: 2003
@@ -53,12 +57,12 @@ This paralysis is not an individual character flaw. It is a predictable cognitiv
 
 ## The Giver-Recipient Asymmetry
 
-In a landmark 2016 paper published in *Current Directions in Psychological Science*, researchers Jeff Galak, Julian Givi, and Elanor Williams identified what they termed the "Giver-Recipient Asymmetry." The core disconnect is temporal: givers focus almost exclusively on the moment of exchange—the grand reveal, the paper tearing, the emotional reaction—while recipients evaluate a gift based on its longitudinal utility and long-term ownership value.
+In a landmark 2016 paper published in *Current Directions in Psychological Science*, researchers Jeff Galak, Julian Givi, and Elanor Williams identified what they termed the "Giver-Recipient Asymmetry."[[@cite:giver-recipient-asymmetry]] The core disconnect is temporal: givers focus almost exclusively on the moment of exchange—the grand reveal, the paper tearing, the emotional reaction—while recipients evaluate a gift based on its longitudinal utility and long-term ownership value.
 
 > When we give, we are directing a short film where we want applause at the climax. When we receive, we are adopting a permanent roommate into our living space.
 > — Clara Vance
 
-Because givers crave a dramatic reaction, they systematically overvalue two qualities: absolute surprise and hyper-novelty. A giver passes over a well-made wooden cutting board because "everyone already has a cutting board," choosing instead a novelty Bluetooth meat thermometer with companion app notifications. The recipient opens the thermometer with curiosity, downloads the app, realizes the battery requires a proprietary charger, and tucks it into the back of a junk drawer forever.
+Because givers crave a dramatic reaction, they systematically overvalue two qualities: absolute surprise and hyper-novelty.[[@cite:giver-recipient-asymmetry]][[@cite:hedonic-utilitarian-gifts]] A giver passes over a well-made wooden cutting board because "everyone already has a cutting board," choosing instead a novelty Bluetooth meat thermometer with companion app notifications. The recipient opens the thermometer with curiosity, downloads the app, realizes the battery requires a proprietary charger, and tucks it into the back of a junk drawer forever.
 
 ### 1. The Fear of the "Boring" Upgrade
 
@@ -72,7 +76,7 @@ When you elevate an item from their daily routine, you weave yourself into their
 
 The second major trap occurs when shopping for someone with a passionate hobby. If your brother is an avid cyclist, you might assume buying him cycling gear is an obvious win. But deep enthusiasts usually possess extremely specific, hyper-refined opinions on gear specifications, tolerances, and brands.
 
-Buying inside someone’s primary technical specialty is a minefield unless you have their exact product code. Instead, the wiser strategy is to gift the periphery of their passion. For the cyclist, don’t guess their pedal cleat system; give them a hand-printed topographic route map of their favorite mountain pass or an indestructible insulated titanium thermos for their post-ride espresso.
+Buying inside someone’s primary technical specialty is a minefield unless you have their exact product code.[[@cite:perspective-taking-study]] Instead, the wiser strategy is to gift the periphery of their passion. For the cyclist, don’t guess their pedal cleat system; give them a hand-printed topographic route map of their favorite mountain pass or an indestructible insulated titanium thermos for their post-ride espresso.
 
 ## A Simple Three-Step Heuristic for Decisive Gifting
 

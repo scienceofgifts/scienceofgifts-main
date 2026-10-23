@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- Standard Meta -->
+<!-- Primary SEO Meta Tags -->
 
 <title>All Gift Guides — Science of Gifts</title>
 
@@ -12,7 +12,8 @@
 <meta name="description" content="Our comprehensive library of researched, field-tested gift guides organized by recipient obsession, craft domain, and material provenance.">
 <link rel="canonical" href="https://scienceofgifts.com/gift-guides/">
 
-<!-- OpenGraph Social Cards -->
+
+<!-- Open Graph / Facebook -->
 <meta property="og:site_name" content="Science of Gifts">
 <meta property="og:type" content="website">
 <meta property="og:title" content="All Gift Guides — Science of Gifts">
@@ -20,8 +21,11 @@
 <meta property="og:url" content="https://scienceofgifts.com/gift-guides/">
 
 
+
   <meta property="og:image" content="https://scienceofgifts.com/assets/home-hero.webp">
   <meta name="twitter:image" content="https://scienceofgifts.com/assets/home-hero.webp">
+
+
 
 
 <!-- Twitter Cards -->
@@ -29,17 +33,83 @@
 <meta name="twitter:title" content="All Gift Guides — Science of Gifts">
 <meta name="twitter:description" content="Our comprehensive library of researched, field-tested gift guides organized by recipient obsession, craft domain, and material provenance.">
 
-<!-- Schema.org JSON-LD -->
+<!-- Centralized Schema.org Structured Data -->
+
+
+
+
+
 
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "Science of Gifts",
-  "url": "https://scienceofgifts.com",
-  "description": "An independent editorial gift publication featuring rigorously researched gift guides, thoughtful essays, and curated recommendations."
+  "@graph": [
+    {
+      "@type": "CollectionPage",
+      "@id": "https://scienceofgifts.com/gift-guides/#webpage",
+      "url": "https://scienceofgifts.com/gift-guides/",
+      "name": "All Gift Guides — Science of Gifts",
+      "description": "Comprehensive library of researched, field-tested gift guides organized by recipient obsession, craft domain, and material provenance."
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://scienceofgifts.com/gift-guides/#itemlist",
+      "name": "Gift Guides Archive",
+      "itemListElement": [
+        
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Gifts for Book Lovers (That Aren’t Just More Books)",
+          "url": "https://scienceofgifts.com/book-lovers-gifts/"
+        },
+        
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "The Best Gifts for History Buffs",
+          "url": "https://scienceofgifts.com/history-gifts/"
+        },
+        
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Gifts for History Teachers & Educators",
+          "url": "https://scienceofgifts.com/history-teachers/"
+        },
+        
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Gifts for People Who \"Have Everything\"",
+          "url": "https://scienceofgifts.com/people-who-have-everything/"
+        }
+        
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://scienceofgifts.com/gift-guides/#breadcrumbs",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://scienceofgifts.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Gift Guides",
+          "item": "https://scienceofgifts.com/gift-guides/"
+        }
+      ]
+    }
+  ]
 }
 </script>
+
+
 
 
 <!-- Typography & Styles -->

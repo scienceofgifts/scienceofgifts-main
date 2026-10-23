@@ -36,6 +36,10 @@ kramdown:
   hard_wrap: false
 
 exclude:
+  - index.html
+  - src
+  - vite.config.ts
+  - tsconfig.json
   - Gemfile
   - Gemfile.lock
   - node_modules

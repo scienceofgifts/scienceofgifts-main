@@ -1779,6 +1779,7 @@ window.SOG_ARTICLES = {
     },
     "sources": [
       {
+        "id": "giver-recipient-asymmetry",
         "title": "The Giver-Recipient Asymmetry: Why Givers and Recipients Disagree on What Makes a Good Gift",
         "author": "Jeff Galak, Julian Givi, and Elanor F. Williams",
         "publication": "Current Directions in Psychological Science",
@@ -1787,6 +1788,7 @@ window.SOG_ARTICLES = {
         "annotation": "Foundational paper establishing the temporal disconnect between giver expectations and receiver longitudinal satisfaction."
       },
       {
+        "id": "hedonic-utilitarian-gifts",
         "title": "Giver-Recipient Asymmetry in Evaluative Judgments of Hedonic and Utilitarian Gifts",
         "author": "Julian Givi and Jeff Galak",
         "publication": "Journal of Consumer Psychology",
@@ -1794,6 +1796,7 @@ window.SOG_ARTICLES = {
         "url": "https://onlinelibrary.wiley.com/journal/15327663"
       },
       {
+        "id": "perspective-taking-study",
         "title": "I Know You Are But What Am I? Perspective Taking in Gift Giving",
         "author": "Nicholas Epley and Yan Zhang",
         "publication": "Journal of Experimental Social Psychology",
@@ -1801,6 +1804,7 @@ window.SOG_ARTICLES = {
         "url": "https://www.sciencedirect.com/journal/journal-of-experimental-social-psychology"
       },
       {
+        "id": "experiential-vs-material",
         "title": "To Do or to Have? That Is the Question (On the Utility of Experiential vs. Material Purchases)",
         "author": "Leaf Van Boven and Thomas Gilovich",
         "publication": "Journal of Personality and Social Psychology",

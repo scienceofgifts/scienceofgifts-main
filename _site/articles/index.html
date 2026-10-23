@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- Standard Meta -->
+<!-- Primary SEO Meta Tags -->
 
 <title>Articles & Essays — Science of Gifts</title>
 
@@ -12,7 +12,8 @@
 <meta name="description" content="In-depth essays and research on gift psychology, material culture, etiquette, and decision science.">
 <link rel="canonical" href="https://scienceofgifts.com/articles/">
 
-<!-- OpenGraph Social Cards -->
+
+<!-- Open Graph / Facebook -->
 <meta property="og:site_name" content="Science of Gifts">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Articles & Essays — Science of Gifts">
@@ -20,8 +21,11 @@
 <meta property="og:url" content="https://scienceofgifts.com/articles/">
 
 
+
   <meta property="og:image" content="https://scienceofgifts.com/assets/home-hero.webp">
   <meta name="twitter:image" content="https://scienceofgifts.com/assets/home-hero.webp">
+
+
 
 
 <!-- Twitter Cards -->
@@ -29,17 +33,76 @@
 <meta name="twitter:title" content="Articles & Essays — Science of Gifts">
 <meta name="twitter:description" content="In-depth essays and research on gift psychology, material culture, etiquette, and decision science.">
 
-<!-- Schema.org JSON-LD -->
+<!-- Centralized Schema.org Structured Data -->
+
+
+
+
+
 
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "Science of Gifts",
-  "url": "https://scienceofgifts.com",
-  "description": "An independent editorial gift publication featuring rigorously researched gift guides, thoughtful essays, and curated recommendations."
+  "@graph": [
+    {
+      "@type": "CollectionPage",
+      "@id": "https://scienceofgifts.com/articles/#webpage",
+      "url": "https://scienceofgifts.com/articles/",
+      "name": "Articles & Essays — Science of Gifts",
+      "description": "In-depth essays and research on gift psychology, material culture, etiquette, and decision science."
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://scienceofgifts.com/articles/#itemlist",
+      "name": "Articles & Essays Archive",
+      "itemListElement": [
+        
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Why We Overthink Giving Gifts",
+          "url": "https://scienceofgifts.com/avoid-overthinking-gift-decisions/"
+        },
+        
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Why Physical Objects Often Outlast \"Experiential\" Gifts",
+          "url": "https://scienceofgifts.com/physical-objects-vs-experiences/"
+        },
+        
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "The Psychology of the Regift: When Passing an Object Along Is an Act of Care",
+          "url": "https://scienceofgifts.com/psychology-of-regifting/"
+        }
+        
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://scienceofgifts.com/articles/#breadcrumbs",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://scienceofgifts.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Articles",
+          "item": "https://scienceofgifts.com/articles/"
+        }
+      ]
+    }
+  ]
 }
 </script>
+
+
 
 
 <!-- Typography & Styles -->

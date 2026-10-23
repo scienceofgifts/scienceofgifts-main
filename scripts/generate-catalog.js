@@ -16,6 +16,40 @@ function parseFrontMatter(filePath) {
   }
 }
 
+function slugify(text) {
+  return String(text || '')
+    .toLowerCase()
+    .trim()
+    .replace(/[^\w\s-]/g, '')
+    .replace(/[-\s]+/g, '-')
+    .replace(/^-+|-+$/g, '');
+}
+
+function assignSourceIds(sources) {
+  if (!Array.isArray(sources)) return [];
+  const usedIds = new Set();
+  return sources.map((src, idx) => {
+    const s = { ...src };
+    let idStr = String(s.id || '').trim();
+    if (!idStr) {
+      let slug = slugify(s.title || '');
+      if (slug.length > 40) slug = slug.substring(0, 40).replace(/-+$/, '');
+      if (!slug) slug = `source-${idx + 1}`;
+      idStr = slug;
+    }
+    let baseId = idStr;
+    let counter = 2;
+    while (usedIds.has(idStr)) {
+      idStr = `${baseId}-${counter}`;
+      counter++;
+    }
+    usedIds.add(idStr);
+    s.id = idStr;
+    return s;
+  });
+}
+
+
 // 1. Authors & Products
 const authors = yaml.load(fs.readFileSync('_data/authors.yml', 'utf8')) || {};
 const products = yaml.load(fs.readFileSync('_data/products.yml', 'utf8')) || [];
@@ -73,7 +107,7 @@ if (fs.existsSync(articlesDir)) {
       heroImageAlt: data.heroImageAlt || '',
       heroImageCaption: data.heroImageCaption || '',
       introQuote: data.introQuote || null,
-      sources: data.sources || [],
+      sources: assignSourceIds(data.sources || []),
       relatedArticleSlugs: data.relatedArticleSlugs || [],
       relatedGuideSlug: data.relatedGuideSlug || ''
     };
