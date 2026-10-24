@@ -220,7 +220,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-trash-2 w-3.5 h-3.5"><path d="M3 6h18"></path><path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"></path><path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"></path><line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line></svg>
               </button>
             </div>
-            <p class="text-xs text-[#5A6270] line-clamp-1 mt-0.5">${item.tagline}</p>
+            ${(item.tagline || item.editorialReview || item.description) ? `<p class="text-xs text-[#5A6270] line-clamp-1 mt-0.5">${item.tagline || item.editorialReview || item.description}</p>` : ''}
           </div>
         </div>
         <div class="pt-2 flex items-center justify-between text-xs border-t border-stone-100">
@@ -549,7 +549,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     </div>
                     <div class="min-w-0">
                       <h5 class="font-medium text-sm text-[#1E232B] line-clamp-1">${p.title || ''}</h5>
-                      <p class="text-xs text-[#5A6270] line-clamp-1 mt-0.5">${p.tagline || p.description || ''}</p>
+                      <p class="text-xs text-[#5A6270] line-clamp-1 mt-0.5">${p.tagline || p.editorialReview || p.description || ''}</p>
                     </div>
                   </div>
                   <div class="flex items-center gap-3 shrink-0">
@@ -1236,7 +1236,7 @@ document.addEventListener('DOMContentLoaded', () => {
             ${p.title}
           </h3>
 
-          ${p.tagline ? `<p class="text-xs text-[#5A6270] leading-relaxed line-clamp-2 italic">${p.tagline}</p>` : ''}
+          ${(p.tagline || p.editorialReview || p.description) ? `<p class="text-xs text-[#5A6270] leading-relaxed line-clamp-2 italic">${p.tagline || p.editorialReview || p.description}</p>` : ''}
 
           ${(p.whyItMakesAGreatGift || p.why_it_makes_a_great_gift) ? `
             <div class="p-2.5 bg-[#E8F8F1]/80 border-l-3 border-[#226E56] text-[11px] text-[#226E56] leading-tight">
@@ -1862,7 +1862,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <span>Best Match for Your Selections</span>
                   </div>
                   <h3 class="font-serif-display text-2xl text-[#1E232B] font-normal leading-snug">${best.product.title}</h3>
-                  <p class="text-xs sm:text-sm text-[#5A6270] italic">${best.product.tagline}</p>
+                  ${(best.product.tagline || best.product.editorialReview || best.product.description) ? `<p class="text-xs sm:text-sm text-[#5A6270] italic">${best.product.tagline || best.product.editorialReview || best.product.description}</p>` : ''}
 
                   <div class="pt-3 flex flex-wrap items-center gap-3">
                     <a href="${best.product.vendorUrl}" ${getVendorRelAttr(best.product.vendor, best.product.vendorUrl)} class="px-5 py-2.5 bg-white text-black border border-black hover:opacity-80 transition-opacity duration-200 text-xs font-bold uppercase tracking-wider inline-flex items-center gap-1.5 shadow-2xs rounded-none">
@@ -1921,7 +1921,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         </button>
                       </div>
                       <h3 class="font-serif-display text-lg text-[#1E232B] font-normal leading-snug">${item.product.title}</h3>
-                      <p class="text-xs text-[#5A6270] leading-relaxed line-clamp-3">${item.product.tagline}</p>
+                      ${(item.product.tagline || item.product.editorialReview || item.product.description) ? `<p class="text-xs text-[#5A6270] leading-relaxed line-clamp-3">${item.product.tagline || item.product.editorialReview || item.product.description}</p>` : ''}
                     </div>
                     <div class="pt-3 border-t border-[#99BFF9]/20">
                       <a href="${item.product.vendorUrl}" ${getVendorRelAttr(item.product.vendor, item.product.vendorUrl)} class="text-xs text-[#2A548E] font-semibold hover:underline flex items-center justify-between">
@@ -1968,7 +1968,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         <a href="${item.product.vendorUrl}" ${getVendorRelAttr(item.product.vendor, item.product.vendorUrl)} class="font-serif-display text-sm sm:text-base text-[#1E232B] font-medium leading-tight mt-0.5 hover:text-[#2A548E] hover:underline line-clamp-1 block" title="View ${item.product.title}">
                           ${item.product.title}
                         </a>
-                        <p class="text-xs text-[#5A6270] line-clamp-1 mt-0.5">${item.product.tagline}</p>
+                        ${(item.product.tagline || item.product.editorialReview || item.product.description) ? `<p class="text-xs text-[#5A6270] line-clamp-1 mt-0.5">${item.product.tagline || item.product.editorialReview || item.product.description}</p>` : ''}
                       </div>
                     </div>
                     <div class="flex items-center gap-1 shrink-0 ml-1">

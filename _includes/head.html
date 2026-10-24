@@ -2,15 +2,21 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <!-- Primary SEO Meta Tags -->
-{% if page.title contains "Science of Gifts" %}
-<title>{{ page.title }}</title>
-{% elsif page.title %}
-<title>{{ page.title }} — Science of Gifts</title>
+{% assign page_title_raw = page['search-title'] | default: page.search-title | default: page['searchTitle'] | default: page.searchTitle | default: page.title %}
+{% if page_title_raw and page_title_raw != "" %}
+  {% if page_title_raw contains "Science of Gifts" %}
+    {% assign page_title = page_title_raw %}
+  {% else %}
+    {% assign page_title = page_title_raw | append: " — Science of Gifts" %}
+  {% endif %}
 {% else %}
-<title>{{ site.title }} — {{ site.tagline }}</title>
+  {% assign page_title = site.title | append: " — " | append: site.tagline %}
 {% endif %}
 
-<meta name="description" content="{{ page.description | default: page.deck | default: site.description | escape }}">
+{% assign page_desc = page['seo-description'] | default: page.seo-description | default: page['seoDescription'] | default: page.seoDescription | default: page.description | default: page.deck | default: site.description | escape %}
+
+<title>{{ page_title }}</title>
+<meta name="description" content="{{ page_desc }}">
 <link rel="canonical" href="https://scienceofgifts.com{{ page.url | replace:'index.html','' }}">
 {% if page.robots %}
 <meta name="robots" content="{{ page.robots }}">
@@ -19,8 +25,8 @@
 <!-- Open Graph / Facebook -->
 <meta property="og:site_name" content="Science of Gifts">
 <meta property="og:type" content="{% if page.layout == 'article' %}article{% else %}website{% endif %}">
-<meta property="og:title" content="{% if page.title contains 'Science of Gifts' %}{{ page.title }}{% elsif page.title %}{{ page.title }} — Science of Gifts{% else %}{{ site.title }} — {{ site.tagline }}{% endif %}">
-<meta property="og:description" content="{{ page.description | default: page.deck | default: site.description | escape }}">
+<meta property="og:title" content="{{ page_title }}">
+<meta property="og:description" content="{{ page_desc }}">
 <meta property="og:url" content="https://scienceofgifts.com{{ page.url | replace:'index.html','' }}">
 
 {% assign og_raw = page.heroImageType | default: page.image | default: page.slug %}
@@ -51,8 +57,8 @@
 
 <!-- Twitter Cards -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="{% if page.title contains 'Science of Gifts' %}{{ page.title }}{% elsif page.title %}{{ page.title }} — Science of Gifts{% else %}{{ site.title }} — {{ site.tagline }}{% endif %}">
-<meta name="twitter:description" content="{{ page.description | default: page.deck | default: site.description | escape }}">
+<meta name="twitter:title" content="{{ page_title }}">
+<meta name="twitter:description" content="{{ page_desc }}">
 
 <!-- Centralized Schema.org Structured Data -->
 {% include schema.html %}
